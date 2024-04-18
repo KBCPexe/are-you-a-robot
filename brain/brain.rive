@@ -1,15 +1,19 @@
 ! version = 2.0
 
-+ hello
-- Hello, what is your name?
++ (hello|hi|yo|wassup|wsg)
+- What's good g, I'm a bin from the endz. State ur name bruv.
 
-+ _
-% hello what is your name
-- Nice to meet you <formal>!
++ *
+- <set name=<star1>>What's up <star1>, how u doin?
 
-+ my name is *
-- Nice to meet you <star>
-- Nice meeting you <star>
++ [*] my name is *
+- <set name=<star1>>What's up <star2>, how u doin?
+
++ [*] (good|great|fine) *
+- Good to hear.
+
++ [*] (not good|sad|meh) *
+- What's got u feelin' down, bruv?
 
 + thank you
 - You are welcome
@@ -22,3 +26,14 @@
 - I am afraid that I can not understand you
 - Sorry can you please elaborate that for me
 - I don't get it!
+
++ knock knock
+- Who's there?
+
++ *
+% who is there
+- <star3> who?
+
++ *
+% * who
+- LOL! <star3>! That's funny!
