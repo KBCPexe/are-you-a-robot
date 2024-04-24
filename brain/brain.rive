@@ -1,7 +1,7 @@
 ! version = 2.0
 
-+ (hello|hi|yo|wassup|wsg)
-- What's good g, I'm a bin from the endz. State ur name bruv.
++ *
+- Welcome to Bomb Defusal, new recruit. Within that room to the left of you is a sentient bomb, keen on destroying this whole block.
 
 + *
 - <set name=<star1>>What's up <star1>, how u doin?
