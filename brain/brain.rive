@@ -1,19 +1,18 @@
 ! version = 2.0
+! local concat = space
 
 + *
-- Welcome to Bomb Defusal, new recruit. Within that room to the left of you is a sentient bomb, keen on destroying this whole block.
+- Welcome to Bomb Defusal, new recruit. \n
+^ Within that room to the left of you is a sentient bomb,
+^ keen on destroying this whole block and anyone within it. \n
+^ \n
+^ Are you ready?
 
-+ *
-- <set name=<star1>>What's up <star1>, how u doin?
++ (yes|no)
+- Don't care, get yer ass in there!
+^ \n
+^ 
 
-+ [*] my name is *
-- <set name=<star1>>What's up <star2>, how u doin?
-
-+ [*] (good|great|fine) *
-- Good to hear.
-
-+ [*] (not good|sad|meh) *
-- What's got u feelin' down, bruv?
 
 + thank you
 - You are welcome
