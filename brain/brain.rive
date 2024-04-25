@@ -6,33 +6,16 @@
 ^ Within that room to the left of you is a sentient bomb,
 ^ keen on destroying this whole block and anyone within it. \n
 ^ \n
-^ Are you ready?
+^ Are you ready?{topic=name}
 
-+ (yes|no)
-- Don't care, get yer ass in there!
-^ \n
-^ 
+> topic name
 
+    + [*] (ready|yes) [*]
+    - Good. What's your name, recruit?
 
-+ thank you
-- You are welcome
-- Welcome
-- No problem
-- No worries!
+    + _
+    % good whats your name recruit
+    - <set name=<formal>>Alright <get name>, get yer ass in there!
 
-+ *
-- Sorry did not get what you said
-- I am afraid that I can not understand you
-- Sorry can you please elaborate that for me
-- I don't get it!
+< topic
 
-+ knock knock
-- Who's there?
-
-+ *
-% who is there
-- <star3> who?
-
-+ *
-% * who
-- LOL! <star3>! That's funny!
