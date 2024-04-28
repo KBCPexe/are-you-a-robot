@@ -2,20 +2,19 @@
 ! local concat = space
 
 + *
-- Welcome to Bomb Defusal, new recruit. \n
+- "Welcome to Bomb Defusal, new recruit. \n
 ^ Within that room to the left of you is a sentient bomb,
-^ keen on destroying this whole block and anyone within it. \n
+^ keen on destroying this whole block and anyone within it." \n
 ^ \n
-^ Are you ready?{topic=name}
+^ "Are you ready?"{topic=name}
 
 > topic name
-
-    + [*] (ready|yes) [*]
+    + [*] (ready|yes|yeah|ok|sure) [*]
     - Good. What's your name, recruit?
 
     + _
-    % good whats your name recruit
-    - <set name=<formal>>Alright <get name>, get yer ass in there!
-
+    - <set name=<formal>> "Alright <get name>, get yer ass in there!" \n
+    ^ \n
+    ^ You are shoved into a dimly lit room, the smell of mold and dust prominent.
 < topic
 
