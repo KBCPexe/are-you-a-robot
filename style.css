@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
 
+@font-face {
+  font-family: 'JGS5';
+  src: url(jgs5.ttf)
+}
+
 * {
   font-family: "Inter", Arial;
   font-size: 12pt;
@@ -77,6 +82,8 @@ body {
 }
 
 .actions {
+  font-family: 'JGS5';
+  font-size: 5pt;
   flex-shrink: 0;
   width: 100%;
   position: sticky;

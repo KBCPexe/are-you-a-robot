@@ -41,3 +41,8 @@ function botReady() {
 function botNotReady(err) {
   console.log("An error has occurred.", err);
 }
+
+
+
+
+console.log('By Kissane, Sahand, Dom and Josh :)')
