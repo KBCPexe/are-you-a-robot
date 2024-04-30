@@ -6,7 +6,8 @@
 ^ just know I'm yer superior and you follow what I say." \n
 ^ \n
 ^ "We got a Code Black on our hands.
-^ Within that room to the left of ya is a sentient bomb."{topic=sarge}
+^ Within that room to the left of ya is a sentient bomb." \n
+^ (Press ENTER to continue) {topic=sarge}
 
 > topic sarge
     + *
@@ -16,24 +17,25 @@
     ^ "Are ya ready?"
 
     + [*] (ready|yes|yeah|yea|ok|sure|mhm) [*]
-    - "Good. What's ya name, recruit?"{topic=name}
+    - "Good. What's ya name, recruit?"{topic=givenname}
 
     + [*] (no|nah|not) [*]
-    - "No choice, newbie. Give me yer name, otherwise yer headstone
-    ^ won't be gettin' a name etched on it."{topic=name}
+    - "No choice, newbie. Give me yer name, otherwise yer gravestone
+    ^ won't be gettin' a name etched on it."{topic=givenname}
 < topic
 
-> topic name
+> topic givenname
     + _
     - <set name=<formal>> "Alright <get name>. We won't forgive you
     ^ if you fail. Now get yer ass in there!" \n
     ^ \n
     ^ You are shoved into a dimly lit room, the smell of mold and dust
     ^ prominent in the air. The door locks behind you, and muffled
-    ^ screams to clear the area can be heard through it.{topic=introduction}
+    ^ screams to clear the area can be heard through it. \n
+    ^ (Press ENTER to continue) {topic=bombintro}
 < topic
 
-> topic introduction
+> topic bombintro
     + *
     - The one flickering light in the room shines down on a single table,
     ^ and on that table lays the problem of everyone in a hundred meter radius. \n
@@ -49,4 +51,5 @@
     - "Awww... I just wanted a new friend, you've just made me sad..." \n
     ^ \n
     ^ - 1 MINUTE ON THE CLOCK
-< topic introduction
+< topic
+
