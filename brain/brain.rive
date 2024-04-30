@@ -17,11 +17,11 @@
     ^ "Are ya ready?"
 
     + [*] (ready|yes|yeah|yea|ok|sure|mhm) [*]
-    - "Good. What's ya name, recruit?"{topic=givenname}
+    - "Good. What's ya name, recruit?" {topic=givenname}
 
     + [*] (no|nah|not) [*]
     - "No choice, newbie. Give me yer name, otherwise yer gravestone
-    ^ won't be gettin' a name etched on it."{topic=givenname}
+    ^ won't be gettin' a name etched on it." {topic=givenname}
 < topic
 
 > topic givenname
@@ -39,17 +39,55 @@
     + *
     - The one flickering light in the room shines down on a single table,
     ^ and on that table lays the problem of everyone in a hundred meter radius. \n
-    ^\n
-    ^"Hi!" A small voice pipes up from the table. 
-    ^"Are you a new friend to play with?"
+    ^ \n
+    ^ "Hi!" A small voice pipes up from the table. 
+    ^ "Are you a new friend to play with?"
 
-    + [*] (yes|yeah|yea|mhm|sure) [*]
+    + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
     - "Great! It's nice to meet you new friend, but I'm afraid
-    ^ our time together might be short..."
+    ^ our time together might be short..." {topic=twotruths}
 
     + [*] (no|nah|not) [*]
     - "Awww... I just wanted a new friend, you've just made me sad..." \n
     ^ \n
-    ^ - 1 MINUTE ON THE CLOCK
+    ^ - 1 MINUTE ON THE CLOCK {topic=ttintro}
 < topic
 
+> topic ttintro
+    + *
+    - "Anyways, I'm excited to play some games with you!" The bomb happily
+    ^ jumps up and down on the table. "I'm gonna ask some questions,
+    ^ do you havta answer them. Cool?" {topic=twotruths}
+< topic
+
+> topic twotruths
+    + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
+    - "Cool! Onto question 1!" \n
+    ^ \n
+    ^ TWO TRUTHS, ONE LIE - Which one is the lie? \n
+    ^ 1\# Bombs are commonly used in the demolition of buildings
+    ^ and mining operations. \n
+    ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
+    ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
+    ^ to exist. {topic=ttanswers}
+
+    + [*] (no|nah|not) [*]
+    - "Don't care! Onto question 1!" \n  
+    ^ \n
+    ^ TWO TRUTHS, ONE LIE - Which one is a lie? \n
+    ^ 1\# Bombs are commonly used in the demolition of buildings
+    ^ and mining operations. \n
+    ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
+    ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
+    ^ to exist. {topic=ttanswers}
+< topic
+
+> topic ttanswers
+    + [*] 3 [*]
+    - "Correct-a-mundo! The Tsar Bomba was the largest nuclear bomb to ever 
+    ^ exist. Onto question 2!"
+    
+    + [*] (1|2) [*]
+    - "WRONG! TRY AGAIN!" \n
+    ^ \n
+    ^ -1 MINUTE ON THE CLOCK

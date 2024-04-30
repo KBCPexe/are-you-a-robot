@@ -2,18 +2,26 @@
 
 @font-face {
   font-family: 'JGS5';
-  src: url(jgs5.ttf)
+  src: url(jgs5.ttf) format(opentype)
 }
 
 * {
-  font-family: "Inter", Arial;
-  font-size: 12pt;
+  font-family: "JGS5", regular;
+  font-size: 14pt;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: #808000;
+  background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjzdrFDNuIHEB7THdZgIjgMIwx2sC-rKmcmIlpBh3toUXrLOaFLQ1qCzuB1lEs5JLB633AIraV6qYLH6QsuLIE5gIDMnf-eMLaUpXJ8C_xUmbLGhgbhi2jKRULGmv13sBzzlkzHKmg-Kp0/s800/bakuhatsu.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  padding:0;
+  margin:0;
+  transition: background-image 2s ease;
 }
 
 .title {
@@ -77,7 +85,6 @@ body {
   margin-right: 20px;
   margin-left: auto;
   background: white;
-  border: 1px solid orangered;
   color: orangered;
 }
 
@@ -109,7 +116,7 @@ input:focus {
 
 @media all and (min-width: 720px) {
   .wrapper {
-    width: 40vw;
+    width: 60vw;
     height: 90vh;
     margin: 0 auto 2.5vh;
   }
