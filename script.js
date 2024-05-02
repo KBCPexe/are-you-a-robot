@@ -42,6 +42,9 @@ function botNotReady(err) {
   console.log("An error has occurred.", err);
 }
 
+var timer = 3600;
+
+
 
 
 

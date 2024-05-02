@@ -5,8 +5,28 @@
   src: url(jgs5.ttf) format(opentype)
 }
 
+@font-face {
+  font-family: 'JGS7';
+  src: url(jgs7.ttf) format(opentype)
+}
+
+@font-face {
+  font-family: 'JGS9';
+  src: url(jgs9.ttf) format(opentype)
+}
+
+@font-face {
+  font-family: 'JGS_Font';
+  src: url(jgs_Font.ttf) format(opentype)
+}
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url(Minecraft.ttf) format(opentype)
+}
+
 * {
-  font-family: "JGS5", regular;
+  font-family: "Minecraft", regular;
   font-size: 14pt;
   margin: 0;
   box-sizing: border-box;
@@ -76,27 +96,24 @@ body {
 .messages .bot {
   text-align: left;
   margin-right: auto;
-  background: black;
-  color: white;
+  color: orangered;
 }
 
 .messages .self {
   text-align: right;
   margin-right: 20px;
   margin-left: auto;
-  background: white;
   color: orangered;
 }
 
 .actions {
   font-family: 'JGS5';
-  font-size: 5pt;
+  font-size: 11pt;
   flex-shrink: 0;
   width: 100%;
   position: sticky;
   bottom: -1px;
   padding: 10px 0px 20px;
-  background: white;
 }
 
 .actions input {
@@ -124,7 +141,7 @@ input:focus {
 
 @media all and (min-width: 1280px) {
   .wrapper {
-    width: 27.5vw;
+    width: 50vw;
   }
   .title {
     height: 7.5vh;

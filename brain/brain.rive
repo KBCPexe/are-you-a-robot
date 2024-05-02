@@ -7,7 +7,8 @@
 ^ \n
 ^ "We got a Code Black on our hands.
 ^ Within that room to the left of ya is a sentient bomb." \n
-^ (Press ENTER to continue) {topic=sarge}
+^ \n
+^ <span class="actions"> (Press ENTER to continue) </span> {topic=sarge}
 
 > topic sarge
     + *
@@ -32,7 +33,7 @@
     ^ You are shoved into a dimly lit room, the smell of mold and dust
     ^ prominent in the air. The door locks behind you, and muffled
     ^ screams to clear the area can be heard through it. \n
-    ^ (Press ENTER to continue) {topic=bombintro}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=bombintro}
 < topic
 
 > topic bombintro
@@ -50,44 +51,37 @@
     + [*] (no|nah|not) [*]
     - "Awww... I just wanted a new friend, you've just made me sad..." \n
     ^ \n
-    ^ - 1 MINUTE ON THE CLOCK {topic=ttintro}
+    ^ <span class="actions"> 1 MINUTE ON THE CLOCK </span> {topic=ttintro}
 < topic
 
 > topic ttintro
     + *
     - "Anyways, I'm excited to play some games with you!" The bomb happily
     ^ jumps up and down on the table. "I'm gonna ask some questions,
-    ^ do you havta answer them. Cool?" {topic=twotruths}
+    ^ do you havta answer them. Cool?" 
+
+    + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
+    - "Cool! Onto question 1!" {topic=twotruths}
+
+    + [*] (no|nah|not) [*]
+    - "Don't care! Onto question 1!" {topic=twotruths}
 < topic
 
 > topic twotruths
-    + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
-    - "Cool! Onto question 1!" \n
-    ^ \n
-    ^ TWO TRUTHS, ONE LIE - Which one is the lie? \n
+    + *
+    - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1\# Bombs are commonly used in the demolition of buildings
     ^ and mining operations. \n
     ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
     ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
-    ^ to exist. {topic=ttanswers}
-
-    + [*] (no|nah|not) [*]
-    - "Don't care! Onto question 1!" \n  
-    ^ \n
-    ^ TWO TRUTHS, ONE LIE - Which one is a lie? \n
-    ^ 1\# Bombs are commonly used in the demolition of buildings
-    ^ and mining operations. \n
-    ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
-    ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
-    ^ to exist. {topic=ttanswers}
+    ^ to exist. {topic=ttanswers1}
 < topic
 
-> topic ttanswers
+> topic ttanswers1
     + [*] 3 [*]
-    - "Correct-a-mundo! The Tsar Bomba was the largest nuclear bomb to ever 
-    ^ exist. Onto question 2!"
+    - "Correct-a-mundo! Onto question 2!" 
     
     + [*] (1|2) [*]
     - "WRONG! TRY AGAIN!" \n
     ^ \n
-    ^ -1 MINUTE ON THE CLOCK
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK <\span>
