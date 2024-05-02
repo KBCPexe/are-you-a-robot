@@ -7,7 +7,6 @@
 ^ \n
 ^ "We got a Code Black on our hands.
 ^ Within that room to the left of ya is a sentient bomb." \n
-^ \n
 ^ <span class="actions"> (Press ENTER to continue) </span> {topic=sarge}
 
 > topic sarge
@@ -22,7 +21,7 @@
 
     + [*] (no|nah|not) [*]
     - "No choice, newbie. Give me yer name, otherwise yer gravestone
-    ^ won't be gettin' a name etched on it." {topic=givenname}
+    ^ won't be gettin' a name etched on it. Now I repeat: Are you ready?
 < topic
 
 > topic givenname
@@ -33,7 +32,6 @@
     ^ You are shoved into a dimly lit room, the smell of mold and dust
     ^ prominent in the air. The door locks behind you, and muffled
     ^ screams to clear the area can be heard through it. \n
-    ^ \n
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=bombintro}
 < topic
 
@@ -51,7 +49,6 @@
 
     + [*] (no|nah|not) [*]
     - "Awww... I just wanted a new friend, you've just made me sad..." \n
-    ^ \n
     ^ <span class="actions"> - 1 MINUTE ON THE CLOCK </span> {topic=ttintro}
 < topic
 
@@ -62,10 +59,12 @@
     ^ do you havta answer them. Cool?" 
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
-    - "Cool! Onto question 1!" {topic=twotruths}
+    - "Cool! Onto question 1!" \n
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=twotruths}
 
     + [*] (no|nah|not) [*]
-    - "Don't care! Onto question 1!" {topic=twotruths}
+    - "Don't care! Onto question 1!"
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=twotruths}
 < topic
 
 > topic twotruths
@@ -77,20 +76,23 @@
     ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
     ^ to exist. {topic=ttanswers1} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
-    ^ 1\# The term bomb originates from the Latin word "bombus"
+    ^ 1\# The term bomb originates from the Latin word "bombus" \n
     ^ 2\# Bombs have been used in warfare since ancient times, with evidence 
-    ^ dating back to ancient China.
+    ^ dating back to ancient China. \n
     ^ 3\# The first recorded use of an explosive in large quantities occured
     ^ during the Renaissance period in Europe. {topic=ttanswers1} {weight=3}
+    - TWO TRUTHS, ONE LIE - Which one is the lie? \n
+    ^ 1\# Computer viruses are also known as "Cyber Bombs". \n
+    ^ 2\# The US is the largest purchaser of explosives in the world. \n
+    ^ 3\# Kamikaze pilots used bombs to cause bigger explosions on impact.
+    ^ {topic=ttanswers1} {weight=3}
 < topic
 
 > topic ttanswers1
     + [*] 3 [*]
     - "Correct-a-mundo! Onto question 2!" 
-    ^ \n
-    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span>
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     
     + [*] (1|2) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>

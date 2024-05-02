@@ -6,18 +6,13 @@
 }
 
 @font-face {
-  font-family: 'JGS7';
-  src: url(jgs7.ttf) format(opentype)
-}
-
-@font-face {
-  font-family: 'JGS9';
-  src: url(jgs9.ttf) format(opentype)
-}
-
-@font-face {
   font-family: 'JGS_Font';
   src: url(jgs_Font.ttf) format(opentype)
+}
+
+@font-face {
+  font-family: 'LCD_Solid';
+  src: url(LcdSolid-VPzB.ttf) format(truetype)
 }
 
 @font-face {
@@ -26,7 +21,7 @@
 }
 
 * {
-  font-family: "JGS5", regular;
+  font-family: "LCD_Solid", regular;
   font-size: 14pt;
   margin: 0;
   box-sizing: border-box;

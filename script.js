@@ -42,7 +42,27 @@ function botNotReady(err) {
   console.log("An error has occurred.", err);
 }
 
-var timer = 3600;
+        function countdown() {
+            let seconds = 600;
+            const timer = setInterval(() => {
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    console.log("Countdown finished!");
+                } else {
+                    updateTimerDisplay(seconds);
+                    seconds--;
+                }
+            }, 1000); // Countdown every 1 second (1000 milliseconds)
+        }
+
+        function updateTimerDisplay(seconds) {
+            const timerElement = document.getElementById("timer");
+            if (timerElement) {
+                timerElement.textContent = seconds;
+            }
+        }
+
+        countdown(); // Start the countdown
 
 
 
