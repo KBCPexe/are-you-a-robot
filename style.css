@@ -26,7 +26,7 @@
 }
 
 * {
-  font-family: "Minecraft", regular;
+  font-family: "JGS5", regular;
   font-size: 14pt;
   margin: 0;
   box-sizing: border-box;
@@ -107,7 +107,9 @@ body {
 }
 
 .actions {
-  font-family: 'JGS5';
+  font-family: 'Minecraft';
+  display: block;
+  color: black;
   font-size: 11pt;
   flex-shrink: 0;
   width: 100%;

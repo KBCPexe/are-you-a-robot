@@ -33,6 +33,7 @@
     ^ You are shoved into a dimly lit room, the smell of mold and dust
     ^ prominent in the air. The door locks behind you, and muffled
     ^ screams to clear the area can be heard through it. \n
+    ^ \n
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=bombintro}
 < topic
 
@@ -46,12 +47,12 @@
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
     - "Great! It's nice to meet you new friend, but I'm afraid
-    ^ our time together might be short..." {topic=twotruths}
+    ^ our time together might be short..." {topic=ttintro}
 
     + [*] (no|nah|not) [*]
     - "Awww... I just wanted a new friend, you've just made me sad..." \n
     ^ \n
-    ^ <span class="actions"> 1 MINUTE ON THE CLOCK </span> {topic=ttintro}
+    ^ <span class="actions"> - 1 MINUTE ON THE CLOCK </span> {topic=ttintro}
 < topic
 
 > topic ttintro
@@ -74,14 +75,22 @@
     ^ and mining operations. \n
     ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
     ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
-    ^ to exist. {topic=ttanswers1}
+    ^ to exist. {topic=ttanswers1} {weight=3}
+    - TWO TRUTHS, ONE LIE - Which one is the lie? \n
+    ^ 1\# The term bomb originates from the Latin word "bombus"
+    ^ 2\# Bombs have been used in warfare since ancient times, with evidence 
+    ^ dating back to ancient China.
+    ^ 3\# The first recorded use of an explosive in large quantities occured
+    ^ during the Renaissance period in Europe. {topic=ttanswers1} {weight=3}
 < topic
 
 > topic ttanswers1
     + [*] 3 [*]
     - "Correct-a-mundo! Onto question 2!" 
+    ^ \n
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span>
     
     + [*] (1|2) [*]
     - "WRONG! TRY AGAIN!" \n
     ^ \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK <\span>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
