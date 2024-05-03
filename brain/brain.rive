@@ -2,8 +2,7 @@
 ! local concat = space
 
 + *
-- "Welcome to Bomb Defusal, new recruit. My name ain't important,
-^ just know I'm yer superior and you follow what I say." \n
+- "Welcome to Bomb Defusal, new recruit." \n
 ^ \n
 ^ "We got a Code Black on our hands.
 ^ Within that room to the left of ya is a sentient bomb." \n
@@ -29,23 +28,19 @@
     - <set name=<formal>> "Alright <get name>. We won't forgive you
     ^ if you fail. Now get yer ass in there!" \n
     ^ \n
-    ^ You are shoved into a dimly lit room, the smell of mold and dust
-    ^ prominent in the air. The door locks behind you, and muffled
-    ^ screams to clear the area can be heard through it. \n
+    ^ You are shoved into the detonation room, it is now your job to defuse \n
+    ^ the bomb
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=bombintro}
 < topic
 
 > topic bombintro
     + *
-    - The one flickering light in the room shines down on a single table,
-    ^ and on that table lays the problem of everyone in a hundred meter radius. \n
-    ^ \n
-    ^ "Hi!" A small voice pipes up from the table. 
-    ^ "Are you a new friend to play with?"
+    - "Hi!" An automated recording proceeds to play. \n
+    ^ "Are you the right person to defuse that device?"
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
-    - "Great! It's nice to meet you new friend, but I'm afraid
-    ^ our time together might be short..." {topic=ttintro}
+    - "Great! We'll soon find out whether you are correct..." 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=ttintro}
 
     + [*] (no|nah|not) [*]
     - "Awww... I just wanted a new friend, you've just made me sad..." \n
@@ -54,9 +49,8 @@
 
 > topic ttintro
     + *
-    - "Anyways, I'm excited to play some games with you!" The bomb happily
-    ^ jumps up and down on the table. "I'm gonna ask some questions,
-    ^ do you havta answer them. Cool?" 
+    - "Anyways, We are being tested right at this moment! You will be asked
+    ^ questions and you havta answer them. Cool?" 
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
     - "Cool! Onto question 1!" \n
@@ -92,7 +86,115 @@
     + [*] 3 [*]
     - "Correct-a-mundo! Onto question 2!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
-    
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question2}
+
     + [*] (1|2) [*]
     - "WRONG! TRY AGAIN!" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+> topic question2
+    + *
+    - QUESTION 2 \n
+    ^ Choose the correct answer. \n
+    ^ \n
+    ^ Which war used the most bombs in the entirety of the conflict? \n
+    ^ \n
+    ^ 1. Korean war (1950-1951) \n
+    ^ 2. Vietnam War (1955-1975) \n
+    ^ 3. Iraq War (2003-2011) \n
+    ^ 4. War against ISIS (2015-ongoing) \n
+
+     + [*] 2 [*]
+    - "Wonderfull! Onto question 3!" 
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question3info}
+
+    + [*] (1|3|4) [*]
+    - "WRONG! TRY AGAIN!" \n
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+<topic
+
+> topic question3info
+     + *
+    - QUESTION 3 \n
+    ^ This question is important so pay attention.. \n
+    ^ \n
+    ^ At the end of this question you will get a a single digit \n
+    ^ which will be the first digit of 4 for your final passcode so pay attention.
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question3}
+
+    <topic
+
+> topic question3
+    + *
+    - Alright, lets get to question 3! \n
+    ^ Which animated disney movie features the song "Let it go" \n
+    ^ \n
+    ^ 1. The Lion King \n
+    ^ 2. Frozen \n
+    ^ 3. Beauty and the Beast \n
+    ^ 4. Aladin \n
+
+      + [*] 2 [*]
+    - "Wonderfull! Now pay attention to this part!" 
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode1}
+
+    + [*] (1|3|4) [*]
+    - "WRONG! TRY AGAIN!" \n
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+    <topic
+
+> topic questionpasscode1
+     + *
+    - YOUR FIRST PASSCODE DIGIT IS 7\n
+    ^ 7 _ _ _
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question4}
+
+    <topic
+
+> topic question4
+    + *
+    - Alright, lets get to question 4! \n
+    ^ What year did the fascist leader of Germany 'Adolf Hitler' commit deathpacito? \n
+    ^ \n
+    ^ 1. 2001 \n
+    ^ 2. 1991 \n
+    ^ 3. 1986 \n
+    ^ 4. 1945\n
+
+      + [*] 4 [*]
+    - "Perfecto amigo... question number 5 it is!" 
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question5}
+
+    + [*] (1|2|3) [*]
+    - "WRONG! TRY AGAIN!" \n
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+<topic
+
+> topic question5
+    + *
+    - Alright, lets get to question 4! \n
+    
+
+      + [*] 4 [*]
+    - "Wonderfull! Now pay attention to this part!" 
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question6}
+
+    + [*] (1|2|3) [*]
+    - "WRONG! TRY AGAIN!" \n
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+    <topic
+
+
+
+
+
+    
+
