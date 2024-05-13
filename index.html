@@ -1,10 +1,27 @@
 <html>
   <head>
+    <meta name=""viewport" content="width=device-width, initial scale=1.0">
     <title>BOMB DEFUSAL</title>
+    
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+
+  <body id="bodyElement"> 
+    <div id="video-container">
+      <video id="starting-video" src="assets/starting-video.mp4" onclick="this.paused ? this.play() : this.pause();" preload>
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div id="video-container-2" class="hidden">
+      <video id="explosion-meme" src="assets/explosion-meme.mp4" muted preload onload="this.pause()">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </body>
+  <div id="website-container">
     <div class="title">
+      <button onclick="addSeconds(60)">Add 1 minute</button>
+      <button onclick="subtractSeconds(60)">Subtract 1 minute</button>
       <h1 id="timer"></h1>
     </div>
     <div class="wrapper">
@@ -15,10 +32,13 @@
         </form>
       </div>
     </div>
-    <script
-      src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./script.js"></script>
+  </div>
+
+  <script
+    src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./script.js"></script>
+  
   </body>
 </html>

@@ -10,6 +10,19 @@ const form = document.querySelector("form");
 
 const input_box = document.querySelector("input");
 
+const video = document.getElementById('starting-video');
+const video2 = document.getElementById('explosion-meme');
+video.volume = 0.8;
+const videoContainer = document.getElementById('video-container');
+const videoContainer2 = document.getElementById('video-container-2');
+const websiteContainer = document.getElementById('website-container');
+
+// Ensures starting video is removed and chat appears.
+video.addEventListener('ended', () => {
+  videoContainer.remove();
+  websiteContainer.classList.add('visible');
+})
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   selfReply(input_box.value);
@@ -39,32 +52,81 @@ function botReady() {
 }
 
 function botNotReady(err) {
-  console.log("An error has occurred.", err);
+  console.log("Uh oh, something bad happened behind the scenes, friend. Reload the page!", err);
 }
 
-        function countdown() {
-            let seconds = 600;
-            const timer = setInterval(() => {
-                if (seconds <= 0) {
-                    clearInterval(timer);
-                    console.log("Countdown finished!");
-                } else {
-                    updateTimerDisplay(seconds);
-                    seconds--;
-                }
-            }, 1000); // Countdown every 1 second (1000 milliseconds)
-        }
+/// Countdown Code ///
 
-        function updateTimerDisplay(seconds) {
-            const timerElement = document.getElementById("timer");
-            if (timerElement) {
-                timerElement.textContent = seconds;
-            }
-        }
+let totalSeconds = 600;
+let timerInterval;
+let subtractionFlag = false;
 
-        countdown(); // Start the countdown
+function countdown() {
+  timerInterval = setInterval(() => {
+      if (totalSeconds <= 0) {
+          clearInterval(timerInterval);
+          console.log("Hope you like my explosive gift!");
+          websiteContainer.remove()
+          videoContainer2.classList.remove("hidden");
+          video2.play()
+      } else {
+          const minutes = Math.floor(totalSeconds / 60);
+          const seconds = totalSeconds % 60;
+          updateTimerDisplay(minutes, seconds);
+          totalSeconds--;
+      }
+  }, 1000); // Countdown every 1 second (1000 milliseconds)
+}
 
+function updateTimerDisplay(minutes, seconds) {
+  const timerElement = document.getElementById("timer");
+  if (timerElement) {
+      timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+}
 
+function addSeconds(secondsToAdd) {
+  totalSeconds += secondsToAdd;
+  updateTimerDisplay(Math.floor(totalSeconds / 60), totalSeconds % 60);
+}
+
+function subtractSeconds(secondsToSubtract) {
+  totalSeconds -= secondsToSubtract;
+  if (totalSeconds < 0) {
+      totalSeconds = 0;
+  }
+  updateTimerDisplay(Math.floor(totalSeconds / 60), totalSeconds % 60);
+}
+
+ // Start countdown when the video ends
+video.addEventListener("ended", function() {
+  countdown(); // Start the countdown
+});
+
+// (WIP) Example function to detect "-1 MINUTE ON THE CLOCK" and subtract 1 minute only once
+function detectTimeChange() {
+  const textOnPage = document.body.textContent;
+  if (textOnPage.includes("-1 MINUTE ON THE CLOCK") && !subtractionFlag) {
+      subtractSeconds(60); // Subtract 60 seconds (1 minute)
+      subtractionFlag = true; // Set flag to true to indicate subtraction has been performed
+  } else if (!textOnPage.includes("-1 MINUTE ON THE CLOCK") && subtractionFlag) {
+      subtractionFlag = false; // Reset flag to false when the text is no longer present
+  }
+}
+
+// Call the function periodically to check for changes
+setInterval(detectTimeChange, 1000); // Check every second
+
+////////////////////////////////////
+
+function preloadObject(url) {
+  return new Promise((resolve, reject) => {
+    const object = new Image();
+    object.onload = () => resolve();
+    object.onerror = () => reject();
+    object.src = url;
+  });
+}
 
 
 
