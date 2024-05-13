@@ -39,7 +39,7 @@
     ^ "Are you the right person to defuse that device?"
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
-    - "Great! We'll soon find out whether you are correct..." 
+    - "Great! We'll soon find out whether you are..." 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=ttintro}
 
     + [*] (no|nah|not) [*]
@@ -66,18 +66,24 @@
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1\# Bombs are commonly used in the demolition of buildings
     ^ and mining operations. \n
+    ^ \n
     ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
+    ^ \n
     ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
     ^ to exist. {topic=ttanswers1} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1\# The term bomb originates from the Latin word "bombus" \n
+    ^ \n 
     ^ 2\# Bombs have been used in warfare since ancient times, with evidence 
     ^ dating back to ancient China. \n
+    ^ \n
     ^ 3\# The first recorded use of an explosive in large quantities occured
     ^ during the Renaissance period in Europe. {topic=ttanswers1} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1\# Computer viruses are also known as "Cyber Bombs". \n
+    ^ \n 
     ^ 2\# The US is the largest purchaser of explosives in the world. \n
+    ^ \n
     ^ 3\# Kamikaze pilots used bombs to cause bigger explosions on impact.
     ^ {topic=ttanswers1} {weight=3}
 < topic
@@ -92,6 +98,9 @@
     - "WRONG! TRY AGAIN!" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
+ 
+< topic
+
 > topic question2
     + *
     - QUESTION 2 \n
@@ -102,8 +111,31 @@
     ^ 1. Korean war (1950-1951) \n
     ^ 2. Vietnam War (1955-1975) \n
     ^ 3. Iraq War (2003-2011) \n
-    ^ 4. War against ISIS (2015-ongoing) \n
+    ^ 4. War against ISIS (2015-ongoing) {topic=q2answers} {weight=3}
+    - QUESTION 2 \n
+     ^ Choose the correct answer. \n
+    ^ \n
+    ^ What was the largest bomb detonated in history? \n
+    ^ \n
+    ^ 1. Little Boy (Hiroshima) \n
+    ^ 2. TSAR Bomb (USSR) \n
+    ^ 3. Fat Man (Nagasaki) \n
+    ^ 4. FOAB (Father of All Bombs) {topic=q2answers} {weight=3}
+    - QUESTION 2 \n
+    ^ Choose the correct answer. \n
+    ^ \n
+    ^ Which country has the most bomb shelters? \n
+    ^ \n
+    ^ 1. Germany \n
+    ^ 2. Switzerland \n
+    ^ 3. United States \n
+    ^ 4. South Korea {topic=q2answers} {weight=3}
 
+< topic 
+   
+
+> topic q2answers
+ 
      + [*] 2 [*]
     - "Wonderfull! Onto question 3!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
@@ -128,45 +160,84 @@
 
 > topic question3
     + *
-    - Alright, lets get to question 3! \n
-    ^ Which animated disney movie features the song "Let it go" \n
+    - QUESTION 3 \n
+    ^ True or False? \n
     ^ \n
-    ^ 1. The Lion King \n
-    ^ 2. Frozen \n
-    ^ 3. Beauty and the Beast \n
-    ^ 4. Aladin \n
+    ^ Chemical/Biological are perfectly legal to use in war. {topic=q3answers} {weight=3}
+    - QUESTION 3 \n
+    ^ True or False? \n
+    ^ \n
+    ^ Bombing campains are often accompanied by propaganda efforts \n
+    ^ to justify the attacks and undermine the enemy's morale. {topic=q3answers} {weight=3}
+    - QUESTION 3 \n
+    ^ True or False? \n
+    ^ \n
+    ^ Sniffer dogs can be used alongside bomb disposal units {topic=q3answers} {weight=3}
 
-      + [*] 2 [*]
-    - "Wonderfull! Now pay attention to this part!" 
+< topic 
+   
+
+> topic q3answers
+ 
+     + [*] false [*]
+    - "You must be a true war hero! Onto question 4!" \n
+    ^ But first your first number to dismantle the bomb.
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode1}
 
-    + [*] (1|3|4) [*]
+    + [*] true [*]
     - "WRONG! TRY AGAIN!" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
-    <topic
+<topic
 
 > topic questionpasscode1
      + *
     - YOUR FIRST PASSCODE DIGIT IS 7\n
-    ^ 7 _ _ _
+    ^ 7 _ _ _ \n
+    ^ Keep that in mind! 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question4}
 
     <topic
 
 > topic question4
     + *
-    - Alright, lets get to question 4! \n
-    ^ What year did the fascist leader of Germany 'Adolf Hitler' commit deathpacito? \n
+    - QUESTION 4 \n
+    ^ Since you're getting good at history let's switch topics AHAHHAH \n
+    ^ Choose the right answer. \n
     ^ \n
-    ^ 1. 2001 \n
-    ^ 2. 1991 \n
-    ^ 3. 1986 \n
-    ^ 4. 1945\n
+    ^ Which football teams did Cristiano Ronaldo NOT play for? \n
+    ^ 1. Real Madrid \n
+    ^ 2. Manchester United \n
+    ^ 3. Sporting Lisbon \n
+    ^ 4. Bayern Munich {topic=q4answers} {weight=3}
+    - QUESTION 4 \n
+    ^ Since you're getting good at history let's switch topics AHAHHAH \n
+    ^ Choose the right answer. \n
+    ^ \n 
+    ^ Which one of these famous F1 drivers has the most Grand Prix's? \n
+    ^ 1. Michael Schumacher \n
+    ^ 2. Max Verstappen \n
+    ^ 3. Charles Leclerc \n 
+    ^ 4. Lewis Hamilton \n {topic=q4answers} {weight=3}
+   - QUESTION 4 \n
+    ^ Since you're getting good at history let's switch topics AHAHHAH \n
+    ^ Choose the right answer. \n
+    ^ \n 
+    ^ Which one of these famous Basketballers is famous for their \n
+    ^ Nike brand deal and considered the best of all time? \n
+    ^ 1. Larry Bird \n
+    ^ 2. Shaquille O'Neal \n
+    ^ 3. James Harden \n 
+    ^ 4. Michael Jordan \n {topic=q4answers} {weight=3} 
 
-      + [*] 4 [*]
-    - "Perfecto amigo... question number 5 it is!" 
+< topic 
+   
+
+> topic q4answers
+ 
+     + [*] 4 [*]
+    - "Mhm not bad I guess! Onto question 5!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question5}
 
@@ -178,19 +249,129 @@
 
 > topic question5
     + *
-    - Alright, lets get to question 4! \n
-    
+    - QUESTION 5 \n
+    ^ I really need to test you a bit more.. \n
+    ^ Choose the right answer. \n
+    ^ \n
+    ^ Which country won the FIFA World Cup in 2022? \n
+    ^ 1. Argentina \n
+    ^ 2. Germany \n
+    ^ 3. France {topic=q5answers} {weight=3}
+    - QUESTION 5 \n
+    ^ I really need to test you more.. \n
+    ^ Choose the right answer. \n
+    ^ \n 
+    ^ What country does Usain Bolt come from? \n
+    ^ 1. Jamaica \n
+    ^ 2. Great Britain \n
+    ^ 3. United States {topic=q5answers} {weight=3}
+   - QUESTION 5 \n
+    ^ I really need to test you more huh. \n
+    ^ Choose the right answer. \n
+    ^ \n 
+    ^ Which one of these famous swimmers is the most decorated ?
+    ^ 1. Michael Phelps \n
+    ^ 2. Grant Hackett \n
+    ^ 3. Sun Yang {topic=q5answers} {weight=3} 
 
-      + [*] 4 [*]
-    - "Wonderfull! Now pay attention to this part!" 
+< topic 
+   
+
+> topic q5answers
+ 
+     + [*] (1|jamaica|argentina|phelps|michael) [*]
+    - "You must follow sports huh! Onto question 5!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question6}
 
-    + [*] (1|2|3) [*]
+    + [*] (2|3) [*]
     - "WRONG! TRY AGAIN!" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
+<topic
+
+> topic question6
+    + *
+    - QUESTION 6 \n
+    ^ You will receive your second digit for the passcode after this question\n
+    ^ Choose the right answer. \n
+    ^ \n
+    ^ Which country won the FIFA World Cup in 2022? \n
+    ^ 1. Argentina \n
+    ^ 2. Germany \n
+    ^ 3. France {topic=q6answers} {weight=3}
+    - QUESTION 6 \n
+    ^ You will receive your second digit for the passcode after this question \n
+    ^ Choose the right answer. \n
+    ^ \n 
+    ^ What country does Usain Bolt come from? \n
+    ^ 1. Jamaica \n
+    ^ 2. Great Britain \n
+    ^ 3. United States {topic=q6answers} {weight=3}
+   - QUESTION 6 \n
+    ^ You will receive your second digit for the passcode after this question \n
+    ^ Choose the right answer. \n
+    ^ \n 
+    ^ Which one of these famous swimmers is the most decorated ?
+    ^ 1. Michael Phelps \n
+    ^ 2. Grant Hackett \n
+    ^ 3. Sun Yang {topic=q6answers} {weight=3} 
+
+< topic 
+   
+
+> topic q6answers
+ 
+     + [*] (1|jamaica|argentina|phelps|michael) [*]
+    - "You must follow sports huh! Onto question 5!" 
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode2}
+
+    + [*] (2|3) [*]
+    - "WRONG! TRY AGAIN!" \n
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+<topic
+
+> topic questionpasscode2
+     + *
+    - YOUR SECOND PASSCODE DIGIT IS 5\n
+    ^ _ 5 _ _ \n
+    ^ Keep that in mind! 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question7}
+
     <topic
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
 
 
 
