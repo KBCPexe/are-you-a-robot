@@ -83,7 +83,7 @@
     ^ 2. The UK has approximately 200 nuclear warheads in its arsenal. \n
     ^ \n
     ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
-    ^ to exist. {topic=ttanswers1} {weight=3}
+    ^ to exist. {topic=q1answers} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1. The term bomb originates from the Latin word "bombus" \n
     ^ \n 
@@ -91,14 +91,14 @@
     ^ dating back to ancient China. \n
     ^ \n
     ^ 3\# The first recorded use of an explosive in large quantities occured
-    ^ during the Renaissance period in Europe. {topic=ttanswers1} {weight=3}
+    ^ during the Renaissance period in Europe. {topic=q1answers} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1. Computer viruses are also known as "Cyber Bombs". \n
     ^ \n 
     ^ 2. The US is the largest purchaser of explosives in the world. \n
     ^ \n
     ^ 3\# Kamikaze pilots used bombs to cause bigger explosions on impact.
-    ^ {topic=ttanswers1} {weight=3}
+    ^ {topic=q1answers} {weight=3}
 < topic
 
 > topic q1answers
