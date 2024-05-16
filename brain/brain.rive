@@ -154,7 +154,7 @@
 
     + [*] (1|3|4) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 < topic
 
@@ -198,7 +198,7 @@
 
     + [*] true [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 < topic
 
@@ -254,7 +254,7 @@
 
     + [*] (1|2|3) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 < topic
 
@@ -297,7 +297,7 @@
 
     + [*] (2|3) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 < topic
 
@@ -339,7 +339,7 @@
 
     + [*] (2|3) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 < topic
 
