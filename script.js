@@ -57,7 +57,9 @@ function botNotReady(err) {
 
 /// Countdown Code ///
 
-let totalSeconds = 600;
+let totalSeconds = 300;
+let secondsToAdd = 60
+let secondsToSubtract = 60
 let timerInterval;
 let subtractionFlag = false;
 
@@ -68,6 +70,7 @@ function countdown() {
           console.log("Hope you like my explosive gift!");
           websiteContainer.remove()
           videoContainer2.classList.remove("hidden");
+          video2.muted = false
           video2.play()
       } else {
           const minutes = Math.floor(totalSeconds / 60);
@@ -76,13 +79,6 @@ function countdown() {
           totalSeconds--;
       }
   }, 1000); // Countdown every 1 second (1000 milliseconds)
-}
-
-function updateTimerDisplay(minutes, seconds) {
-  const timerElement = document.getElementById("timer");
-  if (timerElement) {
-      timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-  }
 }
 
 function addSeconds(secondsToAdd) {
@@ -98,26 +94,37 @@ function subtractSeconds(secondsToSubtract) {
   updateTimerDisplay(Math.floor(totalSeconds / 60), totalSeconds % 60);
 }
 
- // Start countdown when the video ends
+function updateTimerDisplay(minutes, seconds) {
+  const timerElement = document.getElementById("timer");
+  if (timerElement) {
+      timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  }
+}
+
+// Start countdown when the video ends
 video.addEventListener("ended", function() {
   countdown(); // Start the countdown
 });
 
-// (WIP) Example function to detect "-1 MINUTE ON THE CLOCK" and subtract 1 minute only once
-function detectTimeChange() {
-  const textOnPage = document.body.textContent;
-  if (textOnPage.includes("-1 MINUTE ON THE CLOCK") && !subtractionFlag) {
-      subtractSeconds(60); // Subtract 60 seconds (1 minute)
-      subtractionFlag = true; // Set flag to true to indicate subtraction has been performed
-  } else if (!textOnPage.includes("-1 MINUTE ON THE CLOCK") && subtractionFlag) {
-      subtractionFlag = false; // Reset flag to false when the text is no longer present
+
+//////////////// Skip Intro Video ////////////////
+
+function skipVideo() {
+  const videoElement = document.getElementById("video-container");
+  if (videoElement) {
+      videoElement.style.display = "none"; // Hide the video element
+      websiteContainer.classList.add('visible')
+      countdown();
   }
 }
 
-// Call the function periodically to check for changes
-setInterval(detectTimeChange, 1000); // Check every second
+// Event listener for the skip button
+const skipButton = document.getElementById("skip-button");
+if (skipButton) {
+  skipButton.addEventListener("click", skipVideo);
+}
 
-////////////////////////////////////
+///////////////////////////////////////////////////
 
 function preloadObject(url) {
   return new Promise((resolve, reject) => {
