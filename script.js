@@ -57,7 +57,7 @@ function botNotReady(err) {
 
 /// Countdown Code ///
 
-let totalSeconds = 300;
+let totalSeconds = 180;
 let secondsToAdd = 60
 let secondsToSubtract = 60
 let timerInterval;
