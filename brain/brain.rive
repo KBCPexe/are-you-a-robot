@@ -1,6 +1,16 @@
 ! version = 2.0
 ! local concat = space
 
+> object subtractSeconds javascript
+    subtractSeconds(60)
+    return '';
+< object
+
+> object addSeconds javascript
+    addSeconds(30)
+    return '';
+< object
+
 + *
 - "Welcome to Bomb Defusal, new recruit." \n
 ^ \n
@@ -24,7 +34,7 @@
 < topic
 
 > topic givenname
-    + _
+    + *
     - <set name=<formal>> "Alright <get name>. We won't forgive you
     ^ if you fail. Now get yer ass in there!" \n
     ^ \n
@@ -40,28 +50,28 @@
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
     - "Great! We'll soon find out whether you are..." 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=ttintro}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=quiztime}
 
     + [*] (no|nah|not) [*]
     - "Awww... I just wanted a new friend, you've just made me sad..." \n
-    ^ <span class="actions"> - 1 MINUTE ON THE CLOCK </span> {topic=ttintro}
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call> {topic=quiztime}
 < topic
 
-> topic ttintro
+> topic quiztime
     + *
     - "Anyways, We are being tested right at this moment! You will be asked
     ^ questions and you havta answer them. Cool?" 
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
     - "Cool! Onto question 1!" \n
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=twotruths}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question1}
 
     + [*] (no|nah|not) [*]
     - "Don't care! Onto question 1!"
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=twotruths}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question1}
 < topic
 
-> topic twotruths
+> topic question1
     + *
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1\# Bombs are commonly used in the demolition of buildings
@@ -70,7 +80,7 @@
     ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
     ^ \n
     ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
-    ^ to exist. {topic=ttanswers1} {weight=3}
+    ^ to exist. {topic=q1answers} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1\# The term bomb originates from the Latin word "bombus" \n
     ^ \n 
@@ -78,25 +88,25 @@
     ^ dating back to ancient China. \n
     ^ \n
     ^ 3\# The first recorded use of an explosive in large quantities occured
-    ^ during the Renaissance period in Europe. {topic=ttanswers1} {weight=3}
+    ^ during the Renaissance period in Europe. {topic=q1answers} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
     ^ 1\# Computer viruses are also known as "Cyber Bombs". \n
     ^ \n 
     ^ 2\# The US is the largest purchaser of explosives in the world. \n
     ^ \n
     ^ 3\# Kamikaze pilots used bombs to cause bigger explosions on impact.
-    ^ {topic=ttanswers1} {weight=3}
+    ^ {topic=q1answers} {weight=3}
 < topic
 
-> topic ttanswers1
+> topic q1answers
     + [*] 3 [*]
     - "Correct-a-mundo! Onto question 2!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question2}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question2}<call>addSeconds</call>
 
     + [*] (1|2) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span><call>subtractSeconds</call>
 
  
 < topic
@@ -139,13 +149,13 @@
      + [*] 2 [*]
     - "Wonderfull! Onto question 3!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question3info}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question3info} <call>addSeconds</call>
 
     + [*] (1|3|4) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
 
-<topic
+< topic
 
 > topic question3info
      + *
@@ -156,7 +166,7 @@
     ^ which will be the first digit of 4 for your final passcode so pay attention.
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question3}
 
-    <topic
+< topic
 
 > topic question3
     + *
@@ -183,13 +193,13 @@
     - "You must be a true war hero! Onto question 4!" \n
     ^ But first your first number to dismantle the bomb.
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode1}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode1} <call>addSeconds</call>
 
     + [*] true [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
 
-<topic
+< topic
 
 > topic questionpasscode1
      + *
@@ -239,13 +249,13 @@
      + [*] 4 [*]
     - "Mhm not bad I guess! Onto question 5!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question5}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question5} <call>addSeconds</call>
 
     + [*] (1|2|3) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
 
-<topic
+< topic
 
 > topic question5
     + *
@@ -282,13 +292,13 @@
      + [*] (1|jamaica|argentina|phelps|michael) [*]
     - "You must follow sports huh! Onto question 5!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question6}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question6} <call>addSeconds</call>
 
     + [*] (2|3) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
 
-<topic
+< topic
 
 > topic question6
     + *
@@ -325,13 +335,13 @@
      + [*] (1|jamaica|argentina|phelps|michael) [*]
     - "You must follow sports huh! Onto question 5!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode2}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode2} <call>addSeconds</call>
 
     + [*] (2|3) [*]
     - "WRONG! TRY AGAIN!" \n
-    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
 
-<topic
+< topic
 
 > topic questionpasscode2
      + *
@@ -340,7 +350,7 @@
     ^ Keep that in mind! 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question7}
 
-    <topic
+< topic
 
 
 
