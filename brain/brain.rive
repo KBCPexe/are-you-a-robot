@@ -13,7 +13,8 @@
     - "You heard me right, a sentient bomb is in there right now, and it's
     ^ keen on destroyin' this whole block and everyone within it." \n
     ^ \n
-    ^ "Are ya ready?"
+    ^ "Are ya ready?" \n
+    ^ <span class="actions"> (yes or no) </span>
 
     + [*] (ready|yes|yeah|yea|ok|sure|mhm) [*]
     - "Good. What's ya name, recruit?" {topic=givenname}
@@ -36,21 +37,23 @@
 > topic bombintro
     + *
     - "Hi!" An automated recording proceeds to play. \n
-    ^ "Are you the right person to defuse that device?"
+    ^ "Are you the right person to defuse that device?" \n
+    ^ <span class="actions"> (yes or no) </span>
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
     - "Great! We'll soon find out whether you are..." 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=ttintro}
 
     + [*] (no|nah|not) [*]
-    - "Awww... I just wanted a new friend, you've just made me sad..." \n
+    - "Unfortunately for you, you have no option so you have to get your SH@£ together.. ARE YOU THE RIGHT PERSON?" \n
     ^ <span class="actions"> - 1 MINUTE ON THE CLOCK </span> {topic=ttintro}
 < topic
 
 > topic ttintro
     + *
     - "Anyways, We are being tested right at this moment! You will be asked
-    ^ questions and you havta answer them. Cool?" 
+    ^ questions and you havta answer them. Cool?" \n
+    ^ <span class="actions"> (yes or no) </span>
 
     + [*] (yes|yeah|yea|mhm|sure|ok|okay) [*]
     - "Cool! Onto question 1!" \n
@@ -64,27 +67,27 @@
 > topic twotruths
     + *
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
-    ^ 1\# Bombs are commonly used in the demolition of buildings
+    ^ 1. Bombs are commonly used in the demolition of buildings
     ^ and mining operations. \n
     ^ \n
-    ^ 2\# The UK has approximately 200 nuclear warheads in its arsenal. \n
+    ^ 2. The UK has approximately 200 nuclear warheads in its arsenal. \n
     ^ \n
-    ^ 3\# The bomb dropped on Hiroshima was the biggest nuclear bomb
+    ^ 3. The bomb dropped on Hiroshima was the biggest nuclear bomb
     ^ to exist. {topic=ttanswers1} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
-    ^ 1\# The term bomb originates from the Latin word "bombus" \n
+    ^ 1. The term bomb originates from the Latin word "bombus" \n
     ^ \n 
-    ^ 2\# Bombs have been used in warfare since ancient times, with evidence 
+    ^ 2. Bombs have been used in warfare since ancient times, with evidence 
     ^ dating back to ancient China. \n
     ^ \n
-    ^ 3\# The first recorded use of an explosive in large quantities occured
+    ^ 3. The first recorded use of an explosive in large quantities occured
     ^ during the Renaissance period in Europe. {topic=ttanswers1} {weight=3}
     - TWO TRUTHS, ONE LIE - Which one is the lie? \n
-    ^ 1\# Computer viruses are also known as "Cyber Bombs". \n
+    ^ 1. Computer viruses are also known as "Cyber Bombs". \n
     ^ \n 
-    ^ 2\# The US is the largest purchaser of explosives in the world. \n
+    ^ 2. The US is the largest purchaser of explosives in the world. \n
     ^ \n
-    ^ 3\# Kamikaze pilots used bombs to cause bigger explosions on impact.
+    ^ 3. Kamikaze pilots used bombs to cause bigger explosions on impact.
     ^ {topic=ttanswers1} {weight=3}
 < topic
 
@@ -95,7 +98,7 @@
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question2}
 
     + [*] (1|2) [*]
-    - "WRONG! TRY AGAIN!" \n
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
  
@@ -142,7 +145,7 @@
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question3info}
 
     + [*] (1|3|4) [*]
-    - "WRONG! TRY AGAIN!" \n
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 <topic
@@ -186,7 +189,7 @@
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode1}
 
     + [*] true [*]
-    - "WRONG! TRY AGAIN!" \n
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 <topic
@@ -237,12 +240,12 @@
 > topic q4answers
  
      + [*] 4 [*]
-    - "Mhm not bad I guess! Onto question 5!" 
+    - "Well done <get name>! Onto question 5!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question5}
 
     + [*] (1|2|3) [*]
-    - "WRONG! TRY AGAIN!" \n
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 <topic
@@ -280,12 +283,12 @@
 > topic q5answers
  
      + [*] (1|jamaica|argentina|phelps|michael) [*]
-    - "You must follow sports huh! Onto question 5!" 
+    - "You must follow sports huh! Onto question 6!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question6}
 
     + [*] (2|3) [*]
-    - "WRONG! TRY AGAIN!" \n
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 <topic
@@ -322,13 +325,13 @@
 
 > topic q6answers
  
-     + [*] (1|jamaica|argentina|phelps|michael) [*]
-    - "You must follow sports huh! Onto question 5!" 
+     + [*] (2) [*]
+    - "You must follow sports huh! Here's your passcode I guess!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=questionpasscode2}
 
-    + [*] (2|3) [*]
-    - "WRONG! TRY AGAIN!" \n
+    + [*] (1|3) [*]
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
 
 <topic
@@ -341,6 +344,114 @@
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question7}
 
     <topic
+
+ >topic question7
+    + *
+    - QUESTION 7 \n
+    ^ Two truths, One lie, Choose the lie. \n
+    ^ \n
+    ^ 1. Bombs are commonly used in the demolition of buildings and mining operations. \n
+    ^ \n
+    ^ 2. The UK has approximately 200 nuclear warheads in its arsenal. \n
+    ^ \n
+    ^ 3. The bomb dropped on Hiroshima is the largest bomb to ever exist.  {topic=q7answers} {weight=3}
+    - QUESTION 7 \n
+    ^ Two truths, One lie, Choose the lie. \n
+    ^ \n 
+    ^ 1. Bombs have been used in warfare since ancient times. \n
+    ^ \n
+    ^ 2. The word bomb originates from the latin word "Bombus" \n
+    ^ \n
+    ^ 3. The first recorded use of an explosive occured during Renaissance period in Europe {topic=q7answers} {weight=3}
+   - QUESTION 7 \n
+    ^ Two truths, One lie, Choose the lie. \n
+    ^ \n 
+    ^ 1. Computer viruses can also be known as "Cyber Bombs" \n
+    ^ \n
+    ^ 2. The US is the largest purchaser of explosives in the world. \n
+    ^ \n
+    ^ 3. Kamikaze pilots used bombs to cause bigger explosions upon impact. {topic=q7answers} {weight=3} 
+
+< topic 
+
+> topic q7answers
+ 
+     + [*] (3) [*]
+    - "Alright <get name> you're getting good at this! Onto question 8!" 
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question8}
+
+    + [*] (2|1) [*]
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+<topic
+
+>topic question8
+    + *
+    - QUESTION 8 \n
+    ^ True or False \n
+    ^ \n
+    ^ Germany Surrendered World War 2 because of Adolf Hitler's suicide {topic=q8answers} {weight=3}
+    - QUESTION 8 \n
+    ^ True or False \n
+    ^ \n 
+    ^ Winston Churchill was the Prime Minister during World War 2 {topic=q8answers} {weight=3}
+   - QUESTION 8 \n
+    ^ True or False \n
+    ^ \n 
+    ^ Anne Frank is well known for her diary and story writing at the nazi concentration camps {topic=q8answers} {weight=3} 
+
+< topic 
+
+> topic q8answers
+ 
+     + [*] true [*]
+    - "Alright <get name> you're getting good at this! Onto question 9!" 
+    ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question8}
+
+    + [*] false [*]
+    - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span>
+
+<topic
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
 
 
 
