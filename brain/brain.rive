@@ -599,7 +599,8 @@
     - WELL DONE <get name>! You have completed Bomb Defusal! Now all thats left to do is to simply enter the code from the questions! Be careful because if you enter WRONG
     ^ the bomb WILL EXPLODE! \n 
     ^ \n
-    ^ Enter the passcode in the form 0000 (Example) {topic=endpasscode}
+    ^ Enter the passcode in the form 0000 (Example) 
+    ^ <span class="actions"> Do not press ENTER until you have typed your answer! </span> {topic=endpasscode}
 
 < topic
 
