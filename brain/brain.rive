@@ -11,6 +11,14 @@
     return '';
 < object
 
+> object killcommand javascript
+    subtractSeconds(999)
+    return '';
+< object
+
++ killcommand
+- You got it boss! o7 <call>killcommand</call>
+
 + *
 - "Hi!! Welcome to Bomb Defusal, new recruit." \n
 ^ \n

@@ -8,23 +8,21 @@
 
   <body id="bodyElement">
     <div id="video-container">
-      <video id="starting-video" src="assets/starting-video.mp4" onclick="this.paused ? this.play() : this.pause();" preload>
+      <video id="starting-video" src="assets/starting-video (final).mp4" onclick="this.paused ? this.play() : this.pause();" preload>
         Your browser does not support the video tag.
       </video>
-      <button id="skip-button">Skip Cutscene here!</button>
+      <button id="skip-button">SKIP CUTSCENE</button>
     </div>
     <div id="video-container-2" class="hidden">
-      <video id="explosion-meme" src="assets/explosion-meme.mp4" muted preload onload="this.pause()">
+      <video id="lose-cutscene" src="assets/lose-cutscene.mp4" muted preload onload="this.pause()">
         Your browser does not support the video tag.
       </video>
     </div>
     <div id="website-container">
-      <div class="title">
-        <button onclick="addSeconds(60)">Add 1 minute</button>
-        <button onclick="subtractSeconds(60)">Subtract 1 minute</button>
-        <h1 id="timer"></h1>
-      </div>
       <div class="wrapper">
+        <div class="title">
+          <h1 id="timer"></h1>
+        </div>
         <div id="chat" class="chat">
           <div id="messages" class="messages"></div>
           <form class="actions">

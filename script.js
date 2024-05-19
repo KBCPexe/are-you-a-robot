@@ -11,7 +11,7 @@ const form = document.querySelector("form");
 const input_box = document.querySelector("input");
 
 const video = document.getElementById('starting-video');
-const video2 = document.getElementById('explosion-meme');
+const video2 = document.getElementById('lose-cutscene');
 video.volume = 0.8;
 const videoContainer = document.getElementById('video-container');
 const videoContainer2 = document.getElementById('video-container-2');
@@ -57,7 +57,7 @@ function botNotReady(err) {
 
 /// Countdown Code ///
 
-let totalSeconds = 180;
+let totalSeconds = 180; //Change this before showcase
 let secondsToAdd = 60
 let secondsToSubtract = 60
 let timerInterval;
