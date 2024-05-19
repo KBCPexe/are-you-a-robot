@@ -12,18 +12,18 @@
 < object
 
 + *
-- "Welcome to Bomb Defusal, new recruit." \n
+- "Hi!! Welcome to Bomb Defusal, new recruit." \n
 ^ \n
 ^ "We got a Code Red on our hands. Right next to you lays a bomb that is going to explode!" \n
 ^ \n
-^ Your task is to answer every question right and enter the right code to defuse the bomb.
+^ Your task is to answer every question right and enter the right code to defuse the bomb. Or we both die!
 ^ <span class="actions"> (Press ENTER to continue) </span> {topic=sarge}
 
 > topic sarge
     + *
     - "You heard me right, the bomb will explode if you make any mistakes!" \n
     ^ \n
-    ^ "Are ya ready?" \n
+    ^ "Are you ready?" \n
     ^ <span class="actions"> Yes or No </span>
 
     + [*] (ready|yes|yeah|yea|ok|sure|mhm) [*]
@@ -35,7 +35,7 @@
 
 > topic givenname
     + *
-    - <set name=<formal>> "Alright <get name>. We won't forgive you
+    - <set name=<formal>> "Alright <get name>. We won't forget you
     ^ if you fail." \n
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=bombintro}
 < topic
@@ -52,8 +52,8 @@
 
     + [*] (no|nah|not) [*]
     - "Well then... Thanks you have just signed our death certificates." \n
-    ^ <span class="actions"> - 1 MINUTE ON THE CLOCK </span> {topic=quiztime} <call>subtractSeconds</call>
-< topic
+    ^ <span class="actions"> - 1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=quiztime} 
 
 > topic quiztime
     + *
@@ -365,38 +365,38 @@
     - QUESTION 7 \n
     ^ Two truths, One lie, Choose the lie. \n
     ^ \n
-    ^ 1. Bombs are commonly used in the demolition of buildings and mining operations. \n
+    ^ 1. Shortest War lasted less than an hour. \n
     ^ \n
-    ^ 2. The UK has approximately 200 nuclear warheads in its arsenal. \n
+    ^ 2. Longest war lasted 200 years between the Roman Empire and Mongol Empire. \n
     ^ \n
-    ^ 3. The bomb dropped on Hiroshima is the largest bomb to ever exist.  {topic=q7answers} {weight=3}
+    ^ 3. The first use of tanks was in 1916 by the British.  {topic=q7answers} {weight=3}
     - QUESTION 7 \n
     ^ Two truths, One lie, Choose the lie. \n
     ^ \n 
-    ^ 1. Bombs have been used in warfare since ancient times. \n
+    ^ 1. Elephants have been used in warfare since 4th century BCE. \n
     ^ \n
-    ^ 2. The word bomb originates from the latin word "Bombus" \n
+    ^ 2. Military horses are now prohibited from being used in war \n
     ^ \n
-    ^ 3. The first recorded use of an explosive occured during Renaissance period in Europe {topic=q7answers} {weight=3}
+    ^ 3. The Polish have used a bear to help them fight the second world war. {topic=q7answers} {weight=3}
    - QUESTION 7 \n
     ^ Two truths, One lie, Choose the lie. \n
     ^ \n 
-    ^ 1. Computer viruses can also be known as "Cyber Bombs" \n
+    ^ 1. Viet Cong have used an extensive network of tunnels during the Vietnam war to win against the US \n
     ^ \n
-    ^ 2. The US is the largest purchaser of explosives in the world. \n
+    ^ 2. The Roman Empire is a mytholigical empire. \n
     ^ \n
-    ^ 3. Kamikaze pilots used bombs to cause bigger explosions upon impact. {topic=q7answers} {weight=3} 
+    ^ 3. The nazis have launched a bombing campain in WW2 named the "Blitz". {topic=q7answers} {weight=3} 
 
 < topic 
 
 > topic q7answers
  
-     + [*] (3) [*]
+     + [*] (2) [*]
     - "Alright <get name> you're getting good at this! Onto question 8!" 
     ^ <span class="actions"> +30 SECONDS ON THE CLOCK </span> 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=question8} <call>addSeconds</call>
 
-    + [*] (2|1) [*]
+    + [*] (1|3) [*]
     - "GET IT RIGHT OR YOU'RE GONNA FAIL US <get name>" \n
     ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
 
