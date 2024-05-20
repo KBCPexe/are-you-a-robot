@@ -615,13 +615,17 @@
 > topic endpasscode
  
      + [*] 7582 [*]
-    - "WELL DONE YOU HAVE COMPLETED BOMB DEFUSAL RECRUIT!" 
+    - "WELL DONE YOU HAVE COMPLETED BOMB DEFUSAL RECRUIT <get name>!" 
     ^ <span class="actions"> (Press ENTER to continue) </span> {topic=winningscreen}
 
-    + *
+    + #
     - "WRONG! YOU LOST AND WE ARE GOING TO DIE!" \n\
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=explosionscene}
+    ^ <call>killcommand</call>
    
+    + *
+    - THIS IS NOT A DRILL... TYPE IN THE NUMBER! {weight=20}
+    ^ <span class="actions"> -1 MINUTE ON THE CLOCK </span> <call>subtractSeconds</call>
+    
 
 < topic
 
