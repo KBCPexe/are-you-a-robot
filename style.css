@@ -139,7 +139,7 @@ body {
   flex-direction: column;
   padding: 20px 20px 0px 20px;
   scrollbar-color: #39FF14 rgb(24, 24, 24);
-  scrollbar-width: thin;
+  scrollbar-width: auto;
 }
 
 .messages {
