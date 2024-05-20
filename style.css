@@ -64,6 +64,11 @@ body {
   opacity: 100%;
 }
 
+#placeholder {
+  font-size: 11pt
+}
+
+
 #video-container {
   position: absolute;
   top: 0;

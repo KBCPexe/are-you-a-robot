@@ -55,6 +55,26 @@ function botNotReady(err) {
   console.log("Uh oh, something bad happened behind the scenes, friend. Reload the page!", err);
 }
 
+//////////////// Skip Intro Video ////////////////
+
+function skipVideo() {
+  const videoElement = document.getElementById("video-container");
+  if (videoElement) {
+      video.remove;
+      videoElement.style.display = "none"; // Hide the video element
+      websiteContainer.classList.add('visible');
+      countdown();
+  }
+}
+
+// Event listener for the skip button
+const skipButton = document.getElementById("skip-button");
+if (skipButton) {
+  skipButton.addEventListener("click", skipVideo);
+}
+
+//////////////////////
+
 /// Countdown Code ///
 
 let totalSeconds = 180; //Change this before showcase
@@ -68,10 +88,10 @@ function countdown() {
       if (totalSeconds <= 0) {
           clearInterval(timerInterval);
           console.log("Hope you like my explosive gift!");
-          websiteContainer.remove()
+          websiteContainer.remove();
           videoContainer2.classList.remove("hidden");
-          video2.muted = false
-          video2.play()
+          video2.muted = false;
+          video2.play();
       } else {
           const minutes = Math.floor(totalSeconds / 60);
           const seconds = totalSeconds % 60;
@@ -106,25 +126,7 @@ video.addEventListener("ended", function() {
   countdown(); // Start the countdown
 });
 
-
-//////////////// Skip Intro Video ////////////////
-
-function skipVideo() {
-  const videoElement = document.getElementById("video-container");
-  if (videoElement) {
-      videoElement.style.display = "none"; // Hide the video element
-      websiteContainer.classList.add('visible')
-      countdown();
-  }
-}
-
-// Event listener for the skip button
-const skipButton = document.getElementById("skip-button");
-if (skipButton) {
-  skipButton.addEventListener("click", skipVideo);
-}
-
-///////////////////////////////////////////////////
+////////////////////////
 
 function preloadObject(url) {
   return new Promise((resolve, reject) => {
