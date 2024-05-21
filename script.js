@@ -12,9 +12,11 @@ const input_box = document.querySelector("input");
 
 const video = document.getElementById('starting-video');
 const video2 = document.getElementById('lose-cutscene');
+const video3 = document.getElementById('win-cutscene');
 video.volume = 0.8;
 const videoContainer = document.getElementById('video-container');
 const videoContainer2 = document.getElementById('video-container-2');
+const videoContainer3 = document.getElementById('video-container-3');
 const websiteContainer = document.getElementById('website-container');
 
 // Ensures starting video is removed and chat appears.
@@ -127,6 +129,13 @@ video.addEventListener("ended", function() {
 });
 
 ////////////////////////
+
+function wincondition() {
+  websiteContainer.remove();
+  videoContainer3.classList.remove("hidden");
+  video3.muted = false;
+  video3.play();
+}
 
 function preloadObject(url) {
   return new Promise((resolve, reject) => {

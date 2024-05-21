@@ -16,8 +16,16 @@
     return '';
 < object
 
+> object wincondition javascript
+    wincondition()
+    return '';
+< object
+
 + killcommand
 - You got it boss! o7 <call>killcommand</call>
+
++ win
+- Yippee, you won! <call>wincondition</call>
 
 + passcode
 - <span class="actions"> (Press ENTER to continue) </span> {topic=endpasscode}
@@ -619,7 +627,7 @@
  
     +  [*] 7582 [*]
     - "WELL DONE YOU HAVE COMPLETED BOMB DEFUSAL RECRUIT!" 
-    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=winningscreen}
+    ^ <span class="actions"> (Press ENTER to continue) </span> {topic=winningscreen} <call>wincondition</call>
 
     + #
     - "WRONG! YOU LOST AND WE ARE GOING TO DIE!" \n\
