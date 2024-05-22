@@ -13,7 +13,6 @@ const input_box = document.querySelector("input");
 const video = document.getElementById('starting-video');
 const video2 = document.getElementById('lose-cutscene');
 const video3 = document.getElementById('win-cutscene');
-video.volume = 0.8;
 const videoContainer = document.getElementById('video-container');
 const videoContainer2 = document.getElementById('video-container-2');
 const videoContainer3 = document.getElementById('video-container-3');
@@ -128,7 +127,7 @@ video.addEventListener("ended", function() {
   countdown(); // Start the countdown
 });
 
-////////////////////////
+/////////// Win Condition /////////////
 
 function wincondition() {
   websiteContainer.remove();
@@ -136,6 +135,8 @@ function wincondition() {
   video3.muted = false;
   video3.play();
 }
+
+////////////////////////
 
 function preloadObject(url) {
   return new Promise((resolve, reject) => {

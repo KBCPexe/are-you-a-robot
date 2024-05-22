@@ -24,7 +24,7 @@
 + killcommand
 - You got it boss! o7 <call>killcommand</call>
 
-+ win
++ wincommand
 - Yippee, you won! <call>wincondition</call>
 
 + passcode

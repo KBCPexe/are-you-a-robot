@@ -64,11 +64,6 @@ body {
   opacity: 100%;
 }
 
-#placeholder {
-  font-size: 11pt
-}
-
-
 #video-container {
   position: absolute;
   top: 0;
@@ -233,7 +228,13 @@ body {
 
 input:focus {
   transition: 0.1s ease-in;
-  animation-play-state: paused;
+  border-bottom: 2px solid #39FF14;
+}
+
+::placeholder {
+  font-size: 11pt;
+  color: white;
+  text-align: left;
 }
 
 @media all and (min-width: 720px) {
